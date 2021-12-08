@@ -1,0 +1,843 @@
+/* Start Global Rules */
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    color: var(--main-color);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #3976cc;
+}
+
+:root {
+    --main-color: #458FF6;
+    --second-color: #1F1534;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+
+/* End Global Rules */
+
+
+/* Start Header */
+
+header {
+    padding: 20px 0;
+    height: 81px;
+    position: sticky;
+    right: 0;
+    top: 0;
+    background: #fff;
+    z-index: 9999;
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+header div.container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.container nav span.logo {
+    color: #233348;
+    font-weight: bold;
+    position: relative;
+}
+
+header div.container nav span.logo::before {
+    content: 'T';
+    width: 25px;
+    height: 25px;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -12.5px;
+}
+
+header div.container nav div.links {
+    position: relative;
+}
+
+header div.container nav div.links span.burger-menu {
+    display: none;
+    flex-flow: column;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+header div.container nav div.links span.burger-menu span {
+    width: 40px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: var(--second-color);
+    margin-bottom: 5px;
+    transition: 0.6s;
+}
+
+header div.container nav div.links span.burger-menu span:nth-child(2) {
+    width: 20px;
+}
+
+header div.container nav div.links span.burger-menu:hover span:nth-child(2) {
+    width: 40px;
+}
+
+header div.container nav div.links ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+header div.container nav div.links ul li a {
+    transition: 0.6s;
+}
+
+@media (max-width: 767px) {
+    header div.container nav div.links span.burger-menu {
+        display: flex;
+    }
+    header div.container nav div.links ul {
+        width: 150px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f6f6f6;
+        border-radius: 15px;
+        padding: 20px 0;
+        display: none;
+        margin-left: 0;
+        position: absolute;
+        left: -110px;
+        top: 35px;
+    }
+    header div.container nav div.links ul li {
+        margin-bottom: 15px;
+    }
+    header div.container nav div.links ul li a {
+        margin-right: 0 !important;
+    }
+    header div.container nav div.links ul li a:hover {
+        padding-left: 5px;
+    }
+}
+
+header div.container nav div.links ul li a {
+    text-decoration: none;
+    color: #1F1534;
+    margin-right: 30px;
+}
+
+
+/* End Header */
+
+
+/* Start Landing Page */
+
+div.landing-page {
+    padding: 50px 0;
+}
+
+div.landing-page div.container {
+    display: flex;
+    align-items: center;
+}
+
+div.landing-page div.container div.left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.landing-page div.container div.left h1 {
+    width: 60%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+div.landing-page div.container div.left p {
+    width: 55%;
+    color: #7D7987;
+    line-height: 1.6;
+}
+
+div.landing-page div.container div.left button {
+    width: fit-content;
+    background-color: var(--main-color);
+    padding: 12px 25px;
+    margin-top: 15px;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    transition: 0.6s;
+}
+
+div.landing-page div.container div.left button:hover {
+    background-color: #3b7bd4;
+}
+
+div.landing-page div.container div.right {
+    width: 50%;
+}
+
+div.landing-page div.container div.right img {
+    width: 100%;
+    animation: rotate 1s 0s linear infinite alternate both;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    div.landing-page div.container {
+        flex-direction: column;
+        align-items: center;
+    }
+    div.landing-page div.container div.left {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    div.landing-page div.container div.left h1 {
+        width: 70%;
+        text-align: center;
+    }
+    div.landing-page div.container div.left p {
+        width: 100%;
+        text-align: center;
+    }
+    div.landing-page div.container div.right {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    div.landing-page div.container div.left {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    div.landing-page div.container div.left h1 {
+        width: 100%;
+    }
+    div.landing-page div.container div.left p {
+        width: 90%;
+        text-align: left;
+    }
+    div.landing-page div.container div.right {
+        width: 100%;
+    }
+}
+
+
+/* End Landing Page */
+
+
+/* Start Services*/
+
+section.services {
+    padding: 50px 0;
+    position: relative;
+}
+
+section.services div.container img.bg {
+    width: 100%;
+    position: absolute;
+    left: -250px;
+    top: -200px;
+    z-index: -1;
+}
+
+section.services div.container h2 {
+    width: fit-content;
+    margin: 40px auto;
+    padding: 20px 0;
+    transition: 0.6s;
+    position: relative;
+}
+
+section.services div.container h2::before {
+    content: '';
+    width: 30%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    transition: 0.6s;
+    margin-left: 35%;
+}
+
+section.services div.container h2:hover::before {
+    width: 100%;
+    margin-left: 0;
+}
+
+section.services div.container p {
+    width: 65%;
+    text-align: center;
+    color: #7D7987;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+
+section.services div.container div.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 90px;
+    margin-top: 80px;
+}
+
+section.services div.container div.services div {
+    height: 350px;
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.9s;
+    cursor: pointer;
+}
+
+section.services div.container div.services div:hover {
+    transform: translateY(-20px);
+}
+
+section.services div.container div.services div h4 {
+    margin-bottom: 0;
+}
+
+section.services div.container div.services div p {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+}
+
+section.services div.container button.more {
+    width: fit-content;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px 30px;
+    margin: 70px auto;
+}
+
+
+/* End Services*/
+
+
+/* Start Infos */
+
+div.infos {
+    padding: 50px 0;
+}
+
+div.infos div.container div.healthcare,
+div.infos div.container div.download {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto 100px;
+}
+
+div.infos div.container div.healthcare div.left,
+div.infos div.container div.download div.left {
+    width: 45%;
+}
+
+div.infos div.container div.healthcare div.left img,
+div.infos div.container div.download div.right img {
+    width: 100%;
+}
+
+div.infos div.container div.healthcare div.right,
+div.infos div.container div.download div.left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+div.infos div.container div.healthcare div.right h2,
+div.infos div.container div.download div.left h2 {
+    width: 50%;
+    line-height: 1.4;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+div.infos div.container div.healthcare div.right h2::before,
+div.infos div.container div.download div.left h2::before {
+    content: '';
+    width: 15%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+}
+
+div.infos div.container div.healthcare div.right p,
+div.infos div.container div.download div.left p {
+    width: 65%;
+    margin-top: 30px;
+    color: #7D7987;
+}
+
+div.infos div.container div.healthcare div.right button,
+div.infos div.container div.download div.left button {
+    width: fit-content;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px 30px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+div.infos div.container div.download div.left button img {
+    width: 10px;
+    margin-left: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+    div.infos div.container div.healthcare,
+    div.infos div.container div.download {
+        flex-direction: column;
+        align-items: center;
+    }
+    div.infos div.container div.healthcare div.left,
+    div.infos div.container div.download div.left {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    div.infos div.container div.healthcare div.right,
+    div.infos div.container div.download div.right {
+        width: 100%;
+    }
+    div.infos div.container div.healthcare div.right,
+    div.infos div.container div.download div.left {
+        align-items: center;
+    }
+    div.infos div.container div.healthcare div.right h2,
+    div.infos div.container div.download div.left h2 {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    div.infos div.container div.healthcare div.right p,
+    div.infos div.container div.download div.left p {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+
+/* End Infos */
+
+
+/* Start Testimonials */
+
+div.testimonials {
+    padding: 50px 0;
+}
+
+div.testimonials div.container div.saying {
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(162deg, #67C3F3, #5A98F2);
+    border-radius: 30px;
+    color: #fff;
+    padding: 60px;
+}
+
+div.testimonials div.container div.saying h2 {
+    width: fit-content;
+    text-align: center;
+    line-height: 1.4;
+    padding-bottom: 20px;
+    margin: 5px auto;
+    position: relative;
+}
+
+div.testimonials div.container div.saying h2::before {
+    content: '';
+    width: 15%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: translateX(-50%);
+}
+
+div.testimonials div.container div.saying div.customer-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+div.testimonials div.container div.saying div.customer-info div {
+    display: flex;
+    align-items: center;
+}
+
+div.testimonials div.container div.saying div.customer-info div img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+div.testimonials div.container div.saying div.customer-info div span {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15Px;
+}
+
+div.testimonials div.container div.saying div.customer-info p {
+    width: 40%;
+    line-height: 1.6;
+}
+
+div.testimonials div.container div.slide {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.testimonials div.container div.slide i {
+    font-size: 40px;
+    cursor: pointer;
+    color: #458FF6;
+}
+
+div.testimonials div.container div.slide i:first-child {
+    color: rgba(69, 143, 246, 0.4);
+}
+
+div.testimonials div.container div.slide div.cases {
+    display: flex;
+}
+
+div.testimonials div.container div.slide div.cases span:first-child {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(69, 143, 246, 1);
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+div.testimonials div.container div.slide div.cases span:not(span:first-child) {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(69, 143, 246, 0.4);
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    div.testimonials div.container div.saying {
+        height: fit-content;
+        padding: 30px 15px;
+    }
+    div.testimonials div.container div.saying div.customer-info {
+        flex-direction: column;
+    }
+    div.testimonials div.container div.saying div.customer-info p {
+        width: 100%;
+        margin: 50px auto;
+        text-align: center;
+    }
+    div.testimonials div.container div.saying div.customer-info div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    div.testimonials div.container div.saying div.customer-info div img {
+        margin: 20px auto;
+    }
+    div.testimonials div.container div.saying div.customer-info div h5,
+    div.testimonials div.container div.saying div.customer-info div h6 {
+        width: 100%;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+
+/* End Testimonials */
+
+
+/* Start Articles */
+
+article article.articles {
+    padding: 50px 0;
+}
+
+article article.articles div.container {}
+
+article.articles div.container h2 {
+    width: fit-content;
+    margin: 40px auto;
+    padding: 20px 0;
+    transition: 0.6s;
+    position: relative;
+}
+
+article.articles div.container h2::before {
+    content: '';
+    width: 30%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    transition: 0.6s;
+    margin-left: 35%;
+}
+
+article.articles div.container h2:hover::before {
+    width: 100%;
+    margin-left: 0;
+}
+
+article.articles div.container div.articles {
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 50px;
+}
+
+article.articles div.container div.articles div {
+    height: 500px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+article.articles div.container div.articles div.article-one,
+article.articles div.container div.articles div.article-two,
+article.articles div.container div.articles div.article-three {
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+article.articles div.container div.articles div img {
+    margin-bottom: 15px;
+    height: 300px;
+    object-fit: cover;
+}
+
+article.articles div.container div.articles div div.info {
+    padding: 15px 30px;
+}
+
+article.articles div.container div.articles div p {
+    color: #7D7987;
+    line-height: 1.6;
+    width: 90%;
+}
+
+article.articles div.container div.articles div div.info button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    color: #4089ED;
+}
+
+article.articles div.container div.articles div div.info button i {
+    margin-left: 15px;
+}
+
+article.articles div.container button.view {
+    width: fit-content;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px 40px;
+    position: relative;
+    transition: 0.6s;
+    overflow: hidden;
+    z-index: 2;
+    margin: 70px auto;
+}
+
+article.articles div.container button.view:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+article.articles div.container button.view::before {
+    content: '';
+    width: 50%;
+    height: 100%;
+    border-radius: 25px 0 0 25px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -100%;
+    transition: 0.9s;
+    top: 50%;
+    margin-top: -19px;
+    z-index: -1;
+}
+
+article.articles div.container button.view:hover::before {
+    left: 0;
+}
+
+article.articles div.container button.view::after {
+    content: '';
+    width: 50%;
+    height: 100%;
+    border-radius: 0 25px 25px 0;
+    background-color: var(--main-color);
+    position: absolute;
+    right: -100%;
+    top: 50%;
+    transition: 0.9s;
+    margin-top: -19px;
+    z-index: -1;
+}
+
+article.articles div.container button.view:hover::after {
+    right: 0;
+}
+
+
+/* End Articles */
+
+
+/* Start Footer */
+
+footer {
+    margin-top: 250px;
+    padding: 120px 0;
+    background-image: linear-gradient(80deg, #67C3F3, #5A98F2);
+    color: #fff;
+}
+
+footer div.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer div.container div {
+    width: calc((100% - 180px) / 4);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer div.container div:first-child {
+    width: 40% !important;
+}
+
+footer div.container div img {
+    margin-bottom: 15px;
+}
+
+footer div.container div h6 {
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+footer div.container div ul {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer div.container div ul li {
+    margin-bottom: 15px;
+    transition: 0.6s;
+}
+
+footer div.container div ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer div.container div ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 50px 0;
+    }
+    footer div.container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+    footer div.container div {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer div.container div:first-child {
+        width: 100% !important;
+    }
+    footer div.container div:first-child p {
+        text-align: center;
+    }
+    footer div.container div ul {
+        align-items: center;
+    }
+}
+
+
+/* End Footer */
+
+
+/* Start Animations */
+
+@keyframes rotate {
+    from {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* End Animations */
